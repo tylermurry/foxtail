@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="groupAppender" class="ch.qos.logback.classic.sift.SiftingAppender">
+        <discriminator>
+            <key>groupName</key>
+            <defaultValue>foxtail</defaultValue>
+        </discriminator>
+        <sift>
+            <appender name="${groupName}-appender" class="ch.qos.logback.core.rolling.RollingFileAppender">
+                <file>logs/${groupName}.log</file>
+                <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+                    <pattern>%msg%n</pattern>
+                </encoder>
+                <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+                    <fileNamePattern>logs/${groupName}.%i.log.zip</fileNamePattern>
+                    <minIndex>1</minIndex>
+                    <maxIndex>5</maxIndex>
+                </rollingPolicy>
+                <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+                    <maxFileSize>100MB</maxFileSize>
+                </triggeringPolicy>
+            </appender>
+        </sift>
+    </appender>
+
+    <logger name="com.jbhunt.foxtail" level="debug" additivity="false">
+        <appender-ref ref="groupAppender"/>
+    </logger>
+
+    <root level="debug">
+        <appender-ref ref="groupAppender"/>
+    </root>
+
+</configuration>

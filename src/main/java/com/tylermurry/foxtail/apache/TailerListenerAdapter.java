@@ -1,7 +1,7 @@
 /*
  * This file is here to support the tweaked Tailer.java file
  */
-package com.jbhunt.foxtail.apache;
+package com.tylermurry.foxtail.apache;
 
 public class TailerListenerAdapter implements TailerListener
 {

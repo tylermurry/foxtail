@@ -1,4 +1,4 @@
-package com.jbhunt.foxtail.config;
+package com.tylermurry.foxtail.config;
 
 import lombok.extern.slf4j.Slf4j;
 

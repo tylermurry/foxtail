@@ -1,7 +1,7 @@
-package com.jbhunt.foxtail.tailer;
+package com.tylermurry.foxtail.tailer;
 
-import com.jbhunt.foxtail.apache.Tailer;
-import com.jbhunt.foxtail.config.FoxTailConfiguration;
+import com.tylermurry.foxtail.apache.Tailer;
+import com.tylermurry.foxtail.config.FoxTailConfiguration;
 
 import java.io.File;
 import java.util.ArrayList;

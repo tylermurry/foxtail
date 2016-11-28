@@ -1,15 +1,15 @@
-package com.jbhunt.foxtail;
+package com.tylermurry.foxtail;
 
-import com.jbhunt.foxtail.apache.Tailer;
-import com.jbhunt.foxtail.config.FoxTailConfiguration;
+import com.tylermurry.foxtail.apache.Tailer;
+import com.tylermurry.foxtail.config.FoxTailConfiguration;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.List;
 import java.util.Map;
 
-import static com.jbhunt.foxtail.config.ConfigurationAdapter.getConfiguration;
-import static com.jbhunt.foxtail.tailer.TailerUtil.createTailers;
-import static com.jbhunt.foxtail.tailer.TailerUtil.initializerTailers;
+import static com.tylermurry.foxtail.config.ConfigurationAdapter.getConfiguration;
+import static com.tylermurry.foxtail.tailer.TailerUtil.createTailers;
+import static com.tylermurry.foxtail.tailer.TailerUtil.initializerTailers;
 
 @Slf4j
 public class Main
@@ -41,8 +41,8 @@ public class Main
 		}
 		catch (Exception e)
 		{
-			Thread.currentThread().interrupt();
 			log.error("There was an error in the main thread", e);
+			Thread.currentThread().interrupt();
 		}
 	}
 }

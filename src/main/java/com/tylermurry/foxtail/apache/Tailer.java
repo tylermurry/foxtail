@@ -7,7 +7,7 @@ This was causing it to reload the entire file into the log again causing spammin
 Created a JIRA to address the issue: https://issues.apache.org/jira/browse/IO-523
 Will use the new version if the change is rolled into it.
  */
-package com.jbhunt.foxtail.apache;
+package com.tylermurry.foxtail.apache;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;

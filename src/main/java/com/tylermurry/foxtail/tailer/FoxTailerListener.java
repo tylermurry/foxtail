@@ -1,6 +1,6 @@
-package com.jbhunt.foxtail.tailer;
+package com.tylermurry.foxtail.tailer;
 
-import com.jbhunt.foxtail.apache.TailerListenerAdapter;
+import com.tylermurry.foxtail.apache.TailerListenerAdapter;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.MDC;
 
